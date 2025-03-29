@@ -1,42 +1,42 @@
-import Counter  from './counter';
 import Batsman from './batsman';
-import Users from './users';
+import Counter from './counter'
 import './App.css'
+
 
 function App() {
   
-  function handleClick(){
-    alert('I am Clicked.')
-  }
+function handleClick(){
+  alert('Clicked')
+}
 
-  const handleClick3 =() =>{
-    alert('clicked 3')
-  }
 
-  const handleAdd5 = (num) => {
-    const newNum = num + 5;
-    alert(newNum)
-  }
+const handleClick3=()=>{
+  alert('Clicked3')
+}
 
+function handleClick5(num){
+ const newNum = num + 5;
+ alert(newNum)
+}
   return (
     <>
       
-      <h1>Vite + React</h1>
-      <Users></Users>
-      <Batsman></Batsman>
-      <Counter></Counter>
+      <h3>Vite + React</h3>
+    <Batsman></Batsman>
+    <Counter></Counter>
 
 
 
-      {/* <button onClick='handleClick()'>Click Me</button> */}
+      {/* <button onClick="handleClick()">Click Me</button> */}
+   
       <button onClick={handleClick}>Click Me</button>
       <button onClick={function handleClick2(){
-        alert('clicked 2')
+        alert('I am button 2')
       }}>Click Me2</button>
       <button onClick={handleClick3}>Click Me3</button>
-      <button onClick={()=> alert('clicked 4')}>Click Me 4</button>
-      <button onClick={()=> handleAdd5(10)}>Click Me 5</button>
-    </>
+      <button onClick={()=>{alert('clicked4')}}>Click Me4</button>
+      <button onClick={()=>handleClick5(7)}>Click Me5</button>
+      </>
   )
 }
 
